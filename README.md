@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# Lista_De_Tarefas
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Este é um projeto de lista de tarefas desenvolvido com [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
 
