@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import arrowImg from "../../assets/arrow.svg";
 import { auth } from "../../services/firebaseConfig";
 import "../../css/App.css";
@@ -59,7 +59,7 @@ export function Login() {
         </div>
 
         <p>Você não tem uma conta?</p>
-        <a href="/register">Crie a sua conta aqui</a>
+        <Link to="/register">Crie a sua conta aqui</Link>
 
         <button className="button" onClick={handleSignIn}>
           Entrar
