@@ -1,0 +1,504 @@
+/* Estilos gerais */
+.app {
+  text-align: center;
+  background-color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+/* Cabeçalho com barra de pesquisa e botão de logout */
+.cabecalho {
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Lista de tarefas */
+.lista-tarefas {
+  width: 320px;
+  margin: 0 auto;
+  background-color: #2a2a2a;
+  border-radius: 10px;
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 10px;
+  padding-right: 16px;
+}
+
+/* Tarefa individual */
+.container-tarefas {
+  background-color: #3c3c3c;
+  height: 500px;
+  padding: 30px;
+  border-radius: 30px;
+}
+
+.tarefa {
+  background-color: #3c3c3c;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  color: white;
+  position: relative;
+  margin: 10px;
+}
+
+/* Conteúdo da tarefa */
+.conteudo-tarefa {
+  flex: 1;
+  padding-right: 10px;
+}
+
+/* Ponta colorida da tarefa */
+.ponta-colorida {
+  width: 8px;
+  height: 100%;
+  border-radius: 8px 0 0 8px;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Horário da tarefa */
+.horario-tarefa {
+  color: #999;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+/* Modal */
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.conteudo-modal {
+  background-color: #3c3c3c;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 350px;
+  text-align: left;
+  color: white;
+}
+
+.titulo-modal {
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.label-modal {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.input-modal {
+  width: 100%;
+  padding: 8px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  background-color: #555;
+  color: white;
+}
+
+.cores-disponiveis {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.cor-opcao {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.cor-opcao.selecionada {
+  border-color: #fff;
+}
+
+.acoes-tarefa {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 45px;
+}
+
+.botoes-modal {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.botao-modal-cancelar,
+.botao-modal-criar {
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+  color: #fff;
+}
+
+.botao-modal-cancelar {
+  background-color: #ff0000;
+}
+
+.botao-modal-criar {
+  background-color: #00ff00;
+}
+
+.botao-modal {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  color: white;
+}
+
+.botao-modal:hover {
+  opacity: 0.8;
+}
+
+.botao-modal:active {
+  opacity: 0.6;
+}
+
+/* Botão de criar nova tarefa */
+.footer {
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  border-radius: 0 0 30px 30px;
+}
+
+.modal-button {
+  padding: 20px;
+  border-radius: 10px;
+  border: none;
+  background-color: #2a2a2a;
+  color: #fff;
+  cursor: pointer;
+}
+
+/* Botão de logout */
+.logout-button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  background-color: #4caf50;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: -45px;
+}
+
+.logout-button:hover {
+  background-color: #45a049;
+}
+
+/* Barra de pesquisa */
+.barra-pesquisa {
+  width: calc(100% - 120px);
+  margin-right: 10px;
+}
+
+.barra-pesquisa input {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #555;
+  background-color: #333;
+  color: white;
+}
+
+/* Seletor de cor */
+.filtros-cores {
+  display: flex;
+  justify-content: center;
+  margin-top: 12px;
+  width: 150%;
+  justify-content: center;
+}
+
+.cor-opcao {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
+}
+
+.cor-opcao.selecionada {
+  border-color: #fff;
+}
+
+.login {
+  background-color: #2a2a2a;
+  padding: 20px;
+  border-radius: 10px;
+  width: 90%;
+  max-width: 320px;
+  text-align: center;
+  margin-top: 40px;
+}
+
+.header {
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logoImg {
+  width: 50px;
+  height: 50px;
+  margin-bottom: 10px;
+}
+
+.header span {
+  font-size: 14px;
+  color: #999;
+}
+
+.inputContainer {
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.inputContainer label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.inputContainer input {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  background-color: #3c3c3c;
+  color: white;
+}
+
+.inputContainer input::placeholder {
+  color: #777;
+}
+
+a {
+  color: #1e90ff;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.button {
+  width: 100%;
+  padding: 10px;
+  background-color: #4caf50;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button img {
+  margin-left: 5px;
+}
+
+.button:hover {
+  background-color: #45a049;
+}
+
+/* Container do menu de três pontos */
+.menu-container {
+  position: relative;
+}
+
+/* Botão do menu (três pontos) */
+.kebab-menu {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 5px;
+  border-radius: 50%;
+  transition: background-color 0.3s;
+  width: 30px;
+  height: 30px;
+}
+
+.kebab-menu:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Menu de opções (Editar, Excluir) */
+.menu-opcoes {
+  display: flex;
+  position: absolute;
+  top: 25px;
+  right: -43px;
+  background-color: #444;
+  border-radius: 5px;
+  overflow: hidden;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+.menu-opcoes button {
+  display: block;
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: none;
+  color: white;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.menu-opcoes button:hover {
+  background-color: #555;
+}
+
+/* Estilizando o scrollbar */
+.lista-tarefas::-webkit-scrollbar {
+  width: 8px;
+}
+
+.lista-tarefas::-webkit-scrollbar-thumb {
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.lista-tarefas::-webkit-scrollbar-thumb:active {
+  background-color: #333;
+}
+
+.lista-tarefas::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .cabecalho {
+    flex-direction: column;
+  }
+
+  .barra-pesquisa {
+    width: 100%;
+    margin: 10px 0;
+  }
+
+  .footer {
+    flex-direction: column;
+  }
+
+  .lista-tarefas {
+    width: 100%;
+    max-height: 200px;
+  }
+
+  .modal {
+    padding: 10px;
+  }
+
+  .conteudo-modal {
+    width: 100%;
+  }
+
+  .login {
+    width: 100%;
+  }
+
+  .cor-opcao {
+    width: 25px;
+    height: 25px;
+  }
+
+  .button {
+    font-size: 14px;
+    padding: 8px;
+  }
+
+  .logout-button {
+    position: relative;
+    bottom: 40px;
+    left: 76px;
+  }
+
+  .barra-pesquisa input {
+    width: 50%;
+    position: relative;
+    right: 60px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cabecalho {
+    padding: 10px;
+  }
+
+  .lista-tarefas {
+    width: 100%;
+    max-height: 150px;
+  }
+
+  .modal {
+    padding: 5px;
+  }
+
+  .conteudo-modal {
+    width: 100%;
+  }
+
+  .login {
+    width: 100%;
+    padding: 15px;
+  }
+
+  .button {
+    font-size: 12px;
+    padding: 6px;
+  }
+
+  .logout-button {
+    position: relative;
+    bottom: 40px;
+    left: 76px;
+  }
+
+  .barra-pesquisa input {
+    width: 50%;
+    position: relative;
+    right: 60px;
+  }
+}
