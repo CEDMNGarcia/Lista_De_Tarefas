@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { useSignInWithEmailAndPassword } from "react-firebase-hooks/auth";
 import { Link, useNavigate } from "react-router-dom";
-import arrowImg from "../../assets/arrow.svg";
+import arrowImg from "../../assets/arrow.svg"; w
 import { auth } from "../../services/firebaseConfig";
 import "../../css/App.css";
 

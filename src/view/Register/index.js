@@ -59,7 +59,7 @@ export function Register() {
         </div>
 
         <p>Você já tem uma conta?</p>
-        <Link to="/login">Acesse sua conta aqui</Link>
+        <Link to="/">Acesse sua conta aqui</Link>
 
         <button onClick={handleSignOut} className="button">
           Cadastrar <img src={arrowImg} alt="->" />
